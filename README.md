@@ -2,8 +2,16 @@
 
 Steps to reproduce:
 
+1. Start Docker Container
+
 ```sh
 docker-compose up
 ```
 
-Browse to http://localhost:1234/ notice error 5xx, change apache version in docker file to 2.4.48 and it all works fine.
+2. Browse to older apache version
+
+Browse to http://localhost:8048/ and everything works (this is hosted with apache 2.4.48)
+
+3. Browse to latest apache version
+
+Browse to http://localhost:8049/ notice error, this can also result in path too long if path to socket is bit longer
