@@ -1,4 +1,4 @@
-# Apache 2.4.49 - Proxy via mod_rewrite and socket file broken
+# Apache 2.4.61 - Proxy via mod_rewrite and socket file regression
 
 Steps to reproduce:
 
