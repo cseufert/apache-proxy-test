@@ -8,10 +8,17 @@ Steps to reproduce:
 docker-compose up
 ```
 
-2. Browse to older apache version
+2. Browse to 2.4.61 apache version
 
-Browse to http://localhost:8048/ and everything works (this is hosted with apache 2.4.48)
+Browse to http://localhost:8061/ and everything works (this is hosted with apache 2.4.48)
 
-3. Browse to latest apache version
+3. Browse to 2.4.62 apache version
 
-Browse to http://localhost:8049/ notice error, this can also result in path too long if path to socket is bit longer
+Browse to http://localhost:8062/ Errors out trying to access socket
+
+Log:
+
+```
+[proxy:warn] [pid 8:tid 12] [client 172.21.0.1:42238] AH01144: No protocol handler was valid for the URL /index.html (scheme 'unix'). If you are using a DSO version of mod_proxy, make sure the proxy submodules are included in the configuration using LoadModule.
+
+```

@@ -1,17 +1,16 @@
-version: "3.0"
 services:
-  apache48:
-    image: httpd:2.4.48
+  apache62:
+    image: httpd:2.4.62
     ports:
-      - "8048:80"
+      - "8062:80"
     volumes:
       - ./apache-html:/usr/local/apache2/htdocs/
       - ./apache-conf:/usr/local/apache2/conf/
       - ./sock:/run/sock
-  apache49:
-    image: httpd:2.4.49
+  apache61:
+    image: httpd:2.4.61
     ports:
-      - "8049:80"
+      - "8061:80"
     volumes:
       - ./apache-html:/usr/local/apache2/htdocs/
       - ./apache-conf:/usr/local/apache2/conf/
